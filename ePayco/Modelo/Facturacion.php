@@ -72,7 +72,7 @@ class Facturacion
         $nombre = ;
         $this->cnx->exec(
             'INSERT INTO facturas_cuerpo (id_factura, nombre, descripcion, pais, moneda,monto, tax_base, tax, lang, email) VALUES (?,?,?,?,?,?,?,?,?) ',
-                [$id, $data->nombre, $data->descripcion, $data->pais, $data->moneda, $data->monto, $data->tax_base, $data->tax, $data->lang, $data->email]
+                [$id, $data->nombre, $data->descripcion, $data->pais, $data->moneda, $data->monto, $data->tax_base, $data->tax, $data->lang, $data->email_cliente]
         );  
         return $id;
      }

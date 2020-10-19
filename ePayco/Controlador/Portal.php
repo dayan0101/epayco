@@ -129,7 +129,7 @@ class Portal extends Base
         $data = $auth->validarToken($token);
         $this->validar($request, $kernel);
         $v = new Validator($this->json);
-        $v->rule('required', ['email_cliente','nombre_cliente', 'direccion', 'tipo_documento','documento','telefono_cliente','nombre','descripcion','moneda','monto','tax_base','tax', 'pais','lang', 'email'])
+        $v->rule('required', ['email_cliente','nombre_cliente', 'direccion', 'tipo_documento','documento','telefono_cliente','nombre','descripcion','moneda','monto','tax_base','tax', 'pais','lang'])
             ->rule('numeric','documento')
             ->rule('numeric', 'telefono_cliente')
             ->rule('numeric', 'factura')
